@@ -25,7 +25,7 @@ namespace Computer
             Motherboard.Start(voltage);
 
             PrintComponentInfo(Motherboard.Processor);
-            PrintComponentInfo(Motherboard.Card);
+            PrintComponentInfo(Motherboard.Card); 
 
             foreach (Memories.Memory memory in Motherboard.Memories)
             {
@@ -42,7 +42,7 @@ namespace Computer
 
         protected void PrintComponentInfo(ISystemComponent component)
         {
-            component.GetComponentDescription();
+            Console.WriteLine(component.GetComponentDescription());
         }
     }
 }

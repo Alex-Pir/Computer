@@ -1,7 +1,9 @@
 ﻿namespace Computer.Interfaces
 {
-    public interface IMotherboardComponents
+    public interface IMotherboardComponent
     {
+        public int GetMemory();
         public int GetMaxVoltage();
+        public string GetName();
     }
 }
