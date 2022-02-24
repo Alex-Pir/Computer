@@ -4,13 +4,13 @@ using Computer.Interfaces;
 
 namespace Computer
 {
-    public class Computer
+    public class MyComputer
     {
         public Motherboard Motherboard { get; set; }
 
         public PowerUnit PowerUnit { get; set; }
 
-        public Computer(Motherboard motherboard, PowerUnit powerUnit)
+        public MyComputer(Motherboard motherboard, PowerUnit powerUnit)
         {
             Motherboard = motherboard;
             PowerUnit = powerUnit;
@@ -24,6 +24,7 @@ namespace Computer
 
             Motherboard.Start(voltage);
 
+            PrintComponentInfo(Motherboard);
             PrintComponentInfo(Motherboard.Processor);
             PrintComponentInfo(Motherboard.Card); 
 

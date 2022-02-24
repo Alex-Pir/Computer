@@ -6,7 +6,7 @@ using Computer.Interfaces;
 
 namespace Computer.Motherboards
 {
-    public abstract class Motherboard
+    public abstract class Motherboard : ISystemComponent
     {
         public Processor? Processor { get; set; }
 
@@ -99,6 +99,8 @@ namespace Computer.Motherboards
             return SystemStart;
         }
 
+        public abstract string GetComponentDescription();
+        
         protected abstract int GetMaxMemoriesCount();
         protected abstract int GetMaxHddsCount();
     }
