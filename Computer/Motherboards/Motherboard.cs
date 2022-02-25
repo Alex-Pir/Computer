@@ -16,6 +16,10 @@ namespace Computer.Motherboards
 
         public List<Hdd> Hdds { get; set; }
 
+        public int MemoriesCount { get; set; }
+
+        public int HddsCount { get; set; }
+
         private int Voltage = 0;
 
         public bool SystemStart { get; private set; }
@@ -27,6 +31,9 @@ namespace Computer.Motherboards
             Memories = new List<Memory> { };
 
             SystemStart = true;
+
+            MemoriesCount = 1;
+            HddsCount = 1;
         }
 
         public bool Start(int voltage = 0)
@@ -69,21 +76,17 @@ namespace Computer.Motherboards
 
         protected void HddsCheck()
         {
-            int maxHddsCount = GetMaxHddsCount();
-
-            if (Hdds.Count > maxHddsCount)
+            if (Hdds.Count > HddsCount)
             {
-                throw new Exception($"You can only add {maxHddsCount} HDD");
+                throw new Exception($"You can only add {HddsCount} HDD");
             }
         }
 
         protected void MemoriesCheck()
         {
-            int maxMemoriesCount = GetMaxMemoriesCount();
-
-            if (Memories.Count > maxMemoriesCount)
+            if (Memories.Count > MemoriesCount)
             {
-                throw new Exception($"You can only add {maxMemoriesCount} RAM");
+                throw new Exception($"You can only add {MemoriesCount} RAM");
             }
         }
 
@@ -100,7 +103,5 @@ namespace Computer.Motherboards
         }
 
         public abstract string GetComponentDescription();
-        public abstract int GetMaxMemoriesCount();
-        public abstract int GetMaxHddsCount();
     }
 }

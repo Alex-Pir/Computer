@@ -52,7 +52,7 @@ namespace ComputerTests
             int voltage = 750;
 
             //Act
-            int maxHddsCount = motherboard.GetMaxHddsCount();
+            int maxHddsCount = motherboard.HddsCount;
 
             //Assert
             Exception ex = Assert.Throws<Exception>(() => { motherboard.Start(voltage); });
@@ -69,7 +69,7 @@ namespace ComputerTests
             int voltage = 750;
 
             //Act
-            int maxRAMCount = motherboard.GetMaxMemoriesCount();
+            int maxRAMCount = motherboard.MemoriesCount;
 
             //Assert
             Exception ex = Assert.Throws<Exception>(() => { motherboard.Start(voltage); });

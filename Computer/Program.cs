@@ -23,7 +23,7 @@ public class Program
         motherboard.Memories = new List<Memory>
         {
             new Corsair(),
-            new Patriot()
+            new Patriot(),
         };
 
         motherboard.Processor = new IntelI3();
