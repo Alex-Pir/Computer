@@ -8,14 +8,10 @@ namespace Computer.Motherboards
 {
     public class Asus : Motherboard
     {
-        public override int GetMaxHddsCount()
+        public Asus() : base()
         {
-            return 2;
-        }
-
-        public override int GetMaxMemoriesCount()
-        {
-            return 4;
+            HddsCount = 2;
+            MemoriesCount = 4;
         }
 
         public override string GetComponentDescription()

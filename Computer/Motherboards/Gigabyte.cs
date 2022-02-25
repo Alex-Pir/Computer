@@ -2,14 +2,10 @@
 {
     public class Gigabyte : Motherboard
     {
-        public override int GetMaxHddsCount()
+        public Gigabyte() : base()
         {
-            return 3;
-        }
-
-        public override int GetMaxMemoriesCount()
-        {
-            return 2;
+            HddsCount = 3;
+            MemoriesCount = 2;
         }
 
         public override string GetComponentDescription()
