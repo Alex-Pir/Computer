@@ -100,8 +100,7 @@ namespace Computer.Motherboards
         }
 
         public abstract string GetComponentDescription();
-        
-        protected abstract int GetMaxMemoriesCount();
-        protected abstract int GetMaxHddsCount();
+        public abstract int GetMaxMemoriesCount();
+        public abstract int GetMaxHddsCount();
     }
 }

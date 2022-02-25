@@ -2,12 +2,12 @@
 {
     public class Gigabyte : Motherboard
     {
-        protected override int GetMaxHddsCount()
+        public override int GetMaxHddsCount()
         {
             return 3;
         }
 
-        protected override int GetMaxMemoriesCount()
+        public override int GetMaxMemoriesCount()
         {
             return 2;
         }
