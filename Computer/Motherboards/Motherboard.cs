@@ -16,9 +16,9 @@ namespace Computer.Motherboards
 
         public List<Hdd> Hdds { get; set; }
 
-        public int MemoriesCount { get; set; }
+        public int MemoriesCount { get; protected set; }
 
-        public int HddsCount { get; set; }
+        public int HddsCount { get; protected set; }
 
         private int Voltage = 0;
 
